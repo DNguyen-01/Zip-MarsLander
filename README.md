@@ -105,7 +105,7 @@ and computes a new burn that lets the Starship land safely?__
 
 This class, called `OnBoardComputer`, you need to take in the status object 
 (Descent Event) which tells you the status of the vehicle. 
-Then, you make a make a burn recommendation.
+Then, you make a burn recommendation.
 And you keep doing that until the Starship lands softly.
 
 The math is not hard. 

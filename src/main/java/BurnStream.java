@@ -1,3 +1,3 @@
 public interface BurnStream {
-    int getNextBurn(DescentEvent status);
+    int getNextBurn(DescentEvent status) throws InterruptedException;
 }

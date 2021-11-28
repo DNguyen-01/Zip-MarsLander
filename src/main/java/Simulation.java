@@ -48,7 +48,7 @@ public class Simulation {
     }
 
     // main game loop
-    public int runSimulation(BurnStream burnSource) {
+    public int runSimulation(BurnStream burnSource) throws InterruptedException {
         DescentEvent status = null;
         int burnInterval = 0;
         printString(gameHeader());
@@ -72,15 +72,17 @@ public class Simulation {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // create a new Simulation object with a random starting altitude
         // create a new BurnInputStream
         // pass the new BurnInputStream to the runSimulation method
         Simulation game = new Simulation(new Vehicle(Simulation.randomaltitude()));
         BurnStream burnSource = new BurnInputStream();
+        BurnStream OnBoardComputer = new OnBoardComputer();
         game.runSimulation(burnSource);
-    }
+//        game.runSimulation(OnBoardComputer);
 
+    }
 
 
 }
