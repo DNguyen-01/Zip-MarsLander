@@ -63,7 +63,7 @@ public class Vehicle {
     }
 
     public void adjustForBurn(int burnAmount) {
-        // set burn to burnamount requested
+        // set burn to burnAmount requested
         this.Burn = burnAmount;
         // save previousAltitude with current Altitude
         PrevAltitude = Altitude;

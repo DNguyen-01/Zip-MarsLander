@@ -7,7 +7,7 @@ public class Simulation {
     // Mars Simulation Source Code.
     static String version = "2.0"; /* The Version of the program */
 
-    public static int randomaltitude() {
+    public static int randomAltitude() {
         int max = 20000;
         int min = 10000;
         int r = (int)(Math.random() * (max - min)) + min;
@@ -76,11 +76,11 @@ public class Simulation {
         // create a new Simulation object with a random starting altitude
         // create a new BurnInputStream
         // pass the new BurnInputStream to the runSimulation method
-        Simulation game = new Simulation(new Vehicle(Simulation.randomaltitude()));
+        Simulation game = new Simulation(new Vehicle(Simulation.randomAltitude()));
         BurnStream burnSource = new BurnInputStream();
         BurnStream OnBoardComputer = new OnBoardComputer();
-        game.runSimulation(burnSource);
-//        game.runSimulation(OnBoardComputer);
+//        game.runSimulation(burnSource);
+        game.runSimulation(OnBoardComputer);
 
     }
 
