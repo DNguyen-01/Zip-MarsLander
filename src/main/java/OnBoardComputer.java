@@ -15,16 +15,17 @@ public class OnBoardComputer implements BurnStream {
 
     @Override
     public int getNextBurn(DescentEvent status) throws InterruptedException {
+
         int burn = 0;
 
-        if(status.getAltitude() < 12000 && status.getVelocity() > 1000) {
+        if(status.getAltitude() >= 10000 && status.getVelocity() > 200) {
             burn = 200;
-        }if(status.getAltitude() < 10000 && status.getVelocity() > 1000) {
-            burn = 150;
-        }if(status.getAltitude() < 8000 && status.getVelocity() > 200){
+        }if(status.getAltitude() >= 8000 && status.getVelocity() > 200){
+            burn = 198;
+        }if(status.getAltitude() >= 5000 && status.getVelocity() > 100){
             burn = 200;
-        }if(status.getAltitude() < 5000 && status.getVelocity() < 100){
-            burn = 250;
+        }else{
+            burn = 100;
         }
 
 
