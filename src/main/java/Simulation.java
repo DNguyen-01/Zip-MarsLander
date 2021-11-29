@@ -10,8 +10,9 @@ public class Simulation {
     public static int randomAltitude() {
         int max = 20000;
         int min = 10000;
-        int r = (int)(Math.random() * (max - min)) + min;
-        return (r % 15000 + 4000);
+
+        return (int)(Math.random() * (max - min)) + min;
+//      return (r % 15000 + 4000);
     }
 
 
